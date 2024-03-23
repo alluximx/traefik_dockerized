@@ -1,0 +1,15 @@
+version: '3'
+
+volumes:
+  traefik_volume: {}
+
+services:
+  traefik:
+    build:
+      context: .
+      dockerfile: ./compose/Dockerfile
+    container_name: traefik_container
+    image: traefik_local
+    volumes:
+      - traefik_volume:/etc/traefik/acme
+    network_mode: host
