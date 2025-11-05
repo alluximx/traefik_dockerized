@@ -1,5 +1,3 @@
-version: '3'
-
 volumes:
   traefik_volume: {}
 
@@ -8,7 +6,7 @@ services:
     build:
       context: .
       dockerfile: ./compose/Dockerfile
-    container_name: traefik_container
+    container_name: traefik-container
     image: traefik_local
     volumes:
       - traefik_volume:/etc/traefik/acme
