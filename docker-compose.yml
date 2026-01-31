@@ -11,3 +11,4 @@ services:
     volumes:
       - traefik_volume:/etc/traefik/acme
     network_mode: host
+    restart: unless-stopped
